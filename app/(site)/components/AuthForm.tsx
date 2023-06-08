@@ -18,7 +18,13 @@ const AuthFrom = () => {
   }, [variant]);
 
 
-  const {} = useForm<FieldValues>
+  const {} = useForm<FieldValues>({
+    defaultValues:{
+      name:'',
+      email:'',
+      password:''
+    }
+  });
     return (
         <div>Auth From!</div>
       );
