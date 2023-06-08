@@ -34,6 +34,15 @@ const AuthFrom = () => {
 
   const onSubmit : SubmitHandler<FieldValues> = (data) =>{
     setIsLoading(true);
+
+    if(variant === 'REGISTER'){
+      //Axios Register
+
+    }
+
+    if(variant === 'LOGIN'){
+      //NextAuth SignIn
+    }
   }
     return (
         <div>Auth From!</div>
