@@ -1,12 +1,18 @@
 'use client';
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 type Variant = 'LOGIN' | "REGISTER" ;
 
 const AuthFrom = () => {
   const [variant, setVariant] = useState<Variant>('LOGIN');
   const [isLoading, setIsLoading] = useState(false);
+
+  const toggleVariant = useCallback(()=>{
+        if(variant === 'LOGIN'){
+          setVariant('REGISTER');
+        }
+  }, []);
     return (
         <div>Auth From!</div>
       );
