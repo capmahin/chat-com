@@ -44,6 +44,10 @@ const AuthFrom = () => {
       //NextAuth SignIn
     }
   }
+
+  const socialAction = (action:string)=>{
+    
+  }
     return (
         <div>Auth From!</div>
       );
