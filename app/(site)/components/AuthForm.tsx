@@ -11,8 +11,10 @@ const AuthFrom = () => {
   const toggleVariant = useCallback(()=>{
         if(variant === 'LOGIN'){
           setVariant('REGISTER');
+        }else{
+          setVariant('LOGIN');
         }
-  }, []);
+  }, [variant]);
     return (
         <div>Auth From!</div>
       );
