@@ -115,6 +115,9 @@ const AuthFrom = () => {
               </span>
             </div>
           </div>
+          <div className="mt-6 flex gap-2">
+
+          </div>
           </div>
           </div>
         </div>
