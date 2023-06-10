@@ -2,8 +2,10 @@
 
 import { useCallback, useState } from "react";
 import { useForm, FieldValues,SubmitHandler } from "react-hook-form";
+import { BsGithub, BsGoogle  } from 'react-icons/bs';
 import Input from "@/app/components/inputs/Input";
 import Button from "@/app/components/Button";
+import AuthSocialButton from "./AuthSocialButton";
 type Variant = 'LOGIN' | "REGISTER" ;
 
 const AuthFrom = () => {
@@ -116,7 +118,14 @@ const AuthFrom = () => {
             </div>
           </div>
           <div className="mt-6 flex gap-2">
-
+                  <AuthSocialButton
+                   icon={BsGithub} 
+                   onClick={() => socialAction('github')} 
+                  />
+                   <AuthSocialButton 
+              icon={BsGoogle} 
+              onClick={() => socialAction('google')} 
+            />
           </div>
           </div>
           </div>
