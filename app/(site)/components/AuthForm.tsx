@@ -62,13 +62,34 @@ const AuthFrom = () => {
         ">
             <form  className="space-y-6" 
           onSubmit={handleSubmit(onSubmit)}>
-                   <Input disabled={isLoading}
+                   {variant === 'REGISTER' && (
+            <Input
+              disabled={isLoading}
               register={register}
               errors={errors}
               required
               id="name" 
               label="Name"
-                   />
+            />
+          )}
+          <Input 
+            disabled={isLoading}
+            register={register}
+            errors={errors}
+            required
+            id="email" 
+            label="Email address" 
+            type="email"
+          />
+          <Input 
+            disabled={isLoading}
+            register={register}
+            errors={errors}
+            required
+            id="password" 
+            label="Password" 
+            type="password"
+          />
             </form>
           </div>
         </div>
