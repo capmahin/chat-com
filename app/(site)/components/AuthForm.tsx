@@ -67,7 +67,20 @@ const AuthFrom = () => {
     }
 
     if(variant === 'LOGIN'){
-      //NextAuth SignIn
+      signIn('credentials', {
+        ...data,
+        redirect: false
+      })
+      .then((callback) => {
+        if (callback?.error) {
+          toast.error('Invalid credentials!');
+        }
+
+        if (callback?.ok) {
+          router.push('/conversations')
+        }
+      })
+      .finally(() => setIsLoading(false))
     }
   }
 
