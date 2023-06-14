@@ -87,8 +87,18 @@ const AuthFrom = () => {
   const socialAction = (action:string)=>{
     setIsLoading(true);
 
-    //NextAuth Social Sign In
-  }
+    signIn(action, { redirect: false })
+      .then((callback) => {
+        if (callback?.error) {
+          toast.error('Invalid credentials!');
+        }
+
+        if (callback?.ok) {
+          router.push('/conversations')
+        }
+      })
+      .finally(() => setIsLoading(false));
+  } 
     return (
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="
