@@ -24,7 +24,8 @@ const AuthFrom = () => {
 
   useEffect(() => {
     if (session?.status === 'authenticated') {
-      router.push('/conversations')
+      // router.push('/conversations')
+      router.push('/users')
     }
   }, [session?.status, router]);
 
@@ -66,7 +67,8 @@ const AuthFrom = () => {
         }
 
         if (callback?.ok) {
-          router.push('/conversations')
+          // router.push('/conversations')
+          router.push('/users')
         }
       })
       .catch(() => toast.error('Something went wrong!'))
@@ -84,7 +86,8 @@ const AuthFrom = () => {
         }
 
         if (callback?.ok) {
-          router.push('/conversations')
+          router.push('/users')
+          // router.push('/conversations')
         }
       })
       .finally(() => setIsLoading(false))
@@ -101,7 +104,8 @@ const AuthFrom = () => {
         }
 
         if (callback?.ok) {
-          router.push('/conversations')
+          router.push('/users')
+          // router.push('/conversations')
         }
       })
       .finally(() => setIsLoading(false));
